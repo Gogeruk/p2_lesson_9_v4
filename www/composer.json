@@ -1,0 +1,17 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Hillel\\": "./src"
+    }
+  },
+  "require": {
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.0",
+    "illuminate/view": "^7.0",
+    "illuminate/database": "^7.0",
+    "illuminate/routing": "^7.24",
+    "illuminate/validation": "^7",
+    "vlucas/phpdotenv": "^5.3",
+    "illuminate/pagination": "^7.0"
+  }
+}

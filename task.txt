@@ -1,0 +1,75 @@
+1. Подключить пакет https://github.com/vlucas/phpdotenv.
+
+"vlucas/phpdotenv": "^5.3"
+
+Перенести подключение к БД в файл .env
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+2. Реализовать "мягкое" удаление записей
+ко всем трём моделям (Category, Tag, Post)
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+3. Реализовать постраничное разбиение контента для
+выводу данных во всех таблицах.
+
+
+P.S. Продумать файл для пагинации,
+который можно будет подключить для всех трёх таблиц.
+
+P.P.S. Пагинация должна состоять из:
+
+Предыдущая страница
+Ссылка на первую страницу (если мы не странице 4 или более)
+3 номера страницы (текущая в центре)
+Ссылка на последнюю страницу (если мы не близко к концу)
+Следующая страница
+
+
+Пример
+
+
+// Если текущая страница = 1
+1 2 3 ... 10 next
+
+// Если текущая страница = 5
+prev 1 ... 4 5 6 ... 10 next
+
+// Если текущая страница = 10
+prev 1 ... 8 9 10
+
+
+
+
+
+
+
+
+
+
+ALTER TABLE vendors
+ADD COLUMN phone VARCHAR(15) AFTER name;
+
+ALTER TABLE vendors ADD COLUMN deleted at VARCHAR(15) AFTER name;
+
+//////
+SQL STUFF
+
+ALTER TABLE categories ADD COLUMN deleted_at TIMESTAMP AFTER updated_at;
+ALTER TABLE tags ADD COLUMN deleted_at TIMESTAMP AFTER updated_at;
+ALTER TABLE posts ADD COLUMN deleted_at TIMESTAMP AFTER updated_at;
+
+/////
+
+
+
+
+
+
+
+
+
+
+
+//
